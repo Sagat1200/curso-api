@@ -38,7 +38,9 @@ export default defineConfig({
             ],
             refresh: true,
         }),
-        tailwindcss(), // Se agrega el plugin de Tailwind CSS 4 para Vite
+        tailwindcss({
+            optimize: false, // Mantiene DaisyUI sin pasar por Lightning CSS para evitar warnings de @property
+        }), // Se agrega el plugin de Tailwind CSS 4 para Vite
     ],
     resolve: {
         alias: {
